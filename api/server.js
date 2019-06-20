@@ -6,8 +6,12 @@ server.use(express.json())
 
 
 server.get('/', (req, res) => {
-    res.status(200).json({api: "working"})
+    res.status(200).json({api: 'working'})
 })
+
+
+
+
 
 // server.get('/users', (req, res) => {
 //     Users.get()
