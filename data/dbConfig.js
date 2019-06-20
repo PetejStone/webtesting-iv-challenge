@@ -5,6 +5,6 @@ const knex = require('knex')
 const config = require('../knexfile.js')
 
 //setting envrionemnt to the development object if not declared by global connected environment
-const environment = process.env.DB_ENV || 'development';
+const environment = process.env.DB_ENV || 'testing';
 
 module.exports = knex(config[environment]);

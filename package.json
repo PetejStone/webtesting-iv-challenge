@@ -24,6 +24,7 @@
     "supertest": "^3.3.0"
   },
   "dependencies": {
+    "@testing-library/react": "^8.0.1",
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "knex": "^0.17.6",

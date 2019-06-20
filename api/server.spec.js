@@ -26,7 +26,7 @@ describe('server connection', () => {
     })
 
     //checking for the actual returned content
-    it('should return {api: working} ', () => {
+    it('should return {api: working} ', async () => {
         supertest(server)
         .get('/')
         .then(res => {
