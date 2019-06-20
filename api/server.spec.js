@@ -18,10 +18,19 @@ describe('server connection', () => {
         .expect('Content-Type', /json/i) //expect the content type to be json format
     })
 
-    //checking fone
+    //checking for done
     it('should return 200', done => {
         supertest(server)
         .get('/')
         .expect(200, done)
+    })
+
+    //checking for the actual returned content
+    it('should return {api: working} ', () => {
+        supertest(server)
+        .get('/')
+        .then(res => {
+            expect(res.body).toEqual({api: 'working'})
+        })
     })
 })
