@@ -3,15 +3,12 @@ const db = require('../data/dbConfig.js');
 module.exports = {
     //get,
     insert,
-    //remove,
+    remove,
    // update,
     findById
 
 }
 
-function get() {
-    return db('users')
-}
 
 
 function findById(id) {
@@ -24,3 +21,9 @@ async function insert(user) {
   
     return findById(id); //returns the user that was created 
   }
+
+  function remove(id) {
+      //return null
+    return db('users').where({id: id}).del()
+  }
+
